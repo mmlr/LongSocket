@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NoVNC Proxied</title>
+		<script src="longsocket.js"></script>
+		<script src="novnc.js"></script>
+		<link rel="stylesheet" href="novnc.css" />
+	</head>
+	<body>
+		<div id="vnc">
+			<div class="header">
+				<div class="status">
+					<div class="indicator closed"></div>
+					<div class="text">Not initialized</div>
+				</div>
+				<div class="name"></div>
+				<div>
+					<input type="text" id="host" value="localhost" />
+					<input type="number" id="port" min="1" max="65535"
+						value="5900" />
+					<button id="connect">Connect</button>
+					<button id="disconnect">Disconnect</button>
+					<input type="checkbox" id="scale" />
+					<label for="scale">Scale</label>
+					<button id="fullscreen">Fullscreen</button>
+					<button id="ctrlAltDelete">Ctrl-Alt-Delete</button>
+				</div>
+			</div>
+			<div class="screen"></div>
+		</div>
+	</body>
+</html>

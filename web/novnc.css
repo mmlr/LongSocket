@@ -1,0 +1,76 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	padding: 0.5em;
+}
+
+button, input {
+	margin: 0 0.25em;
+}
+
+.status {
+	display: flex;
+	align-items: center;
+}
+
+.indicator {
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	margin-right: 0.25em;
+	background-color: transparent;
+}
+
+.indicator.error {
+	background-color: red;
+}
+
+.indicator.closed {
+	background-color: orange;
+}
+
+.indicator.connected {
+	background-color: green;
+}
+
+body, #vnc, .screen {
+	height: 100%;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+#vnc {
+	display: flex;
+	flex-direction: column;
+}
+
+.screen {
+	min-height: 0;
+}
+
+.fullscreen #vnc .screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
